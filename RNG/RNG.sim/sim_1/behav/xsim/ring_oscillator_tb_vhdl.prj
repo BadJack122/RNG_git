@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100_sim_netlist.vhdl" \
+"../../../../../../Entrust/fwmuro/muro_definitions.vhd" \
+"../../../../../../Entrust/fwmuro/muro_oscillator.vhd" \
+"../../../../../../Entrust/fwmuro/muro_oscillator_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../RNG.gen/sources_1/ip/master_ring_pll_220m/master_ring_pll_220m_sim_netlist.vhdl" \
+
+nosort

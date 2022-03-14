@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Mon Mar  7 10:17:53 2022
+# Process ID: 5168
+# Current directory: C:/edt/RNG/RNG.runs/ring_counter_fifo_synth_1
+# Command line: vivado.exe -log ring_counter_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ring_counter_fifo.tcl
+# Log file: C:/edt/RNG/RNG.runs/ring_counter_fifo_synth_1/ring_counter_fifo.vds
+# Journal file: C:/edt/RNG/RNG.runs/ring_counter_fifo_synth_1\vivado.jou
+# Running On: EUL10-C37V3J3, OS: Windows, CPU Frequency: 1690 MHz, CPU Physical cores: 4, Host memory: 33723 MB
+#-----------------------------------------------------------
+source ring_counter_fifo.tcl -notrace

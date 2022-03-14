@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1646818112">
+  <File Type="ROUTE-PWR" Name="ring_oscillator_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ring_oscillator.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="ring_oscillator_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ring_oscillator_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="ring_oscillator.msk"/>
+  <File Type="ROUTE-CLK" Name="ring_oscillator_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="ring_oscillator.vdi"/>
+  <File Type="BG-BIT" Name="ring_oscillator.bit"/>
+  <File Type="BG-DRC" Name="ring_oscillator.drc"/>
+  <File Type="BG-BGN" Name="ring_oscillator.bgn"/>
+  <File Type="BG-BIN" Name="ring_oscillator.bin"/>
+  <File Type="BITSTR-RBT" Name="ring_oscillator.rbt"/>
+  <File Type="BITSTR-NKY" Name="ring_oscillator.nky"/>
+  <File Type="BITSTR-BMM" Name="ring_oscillator_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="ring_oscillator.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ring_oscillator_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="ring_oscillator.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ring_oscillator.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="ring_oscillator_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ring_oscillator.hwdef"/>
+  <File Type="PLACE-IO" Name="ring_oscillator_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ring_oscillator_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ring_oscillator_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ring_oscillator_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ring_oscillator_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="ring_oscillator_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ring_oscillator_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ring_oscillator_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ring_oscillator_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ring_oscillator_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="ring_oscillator_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ring_oscillator_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ring_oscillator_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ring_oscillator_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ring_oscillator_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ring_oscillator_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ring_oscillator_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ring_oscillator_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ring_oscillator_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="ring_oscillator_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="ring_oscillator_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="ring_oscillator_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ring_oscillator_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="ring_oscillator_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ring_oscillator_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ring_oscillator_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ring_oscillator_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="ring_oscillator_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ring_oscillator_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="ring_oscillator.pdi"/>
+  <File Type="RCFI_FILE" Name="ring_oscillator.rcfi"/>
+  <File Type="CFI_FILE" Name="ring_oscillator.cfi"/>
+  <File Type="RNPI_FILE" Name="ring_oscillator.rnpi"/>
+  <File Type="NPI_FILE" Name="ring_oscillator.npi"/>
+  <File Type="RBD_FILE" Name="ring_oscillator.rbd"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Entrust/fwmuro/muro_definitions.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Entrust/fwmuro/muro_oscillator.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Entrust/fwmuro/muro_oscillator_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ring_oscillator"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../Entrust/fwmuro/muro.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/ring_oscillator.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_200_to_100"/>
+  <BlockFileSet Type="BlockSrcs" Name="jitter_vio"/>
+  <BlockFileSet Type="BlockSrcs" Name="ring_vio"/>
+  <BlockFileSet Type="BlockSrcs" Name="raw_sample_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="raw_sample_vio"/>
+  <BlockFileSet Type="BlockSrcs" Name="ring_counter_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="master_ring_pll_220m"/>
+</GenRun>

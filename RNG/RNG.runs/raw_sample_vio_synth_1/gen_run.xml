@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="raw_sample_vio_synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1646648020">
+  <File Type="PA-TCL" Name="raw_sample_vio.tcl"/>
+  <File Type="REPORTS-TCL" Name="raw_sample_vio_reports.tcl"/>
+  <File Type="RDS-RDS" Name="raw_sample_vio.vds"/>
+  <File Type="RDS-UTIL" Name="raw_sample_vio_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="raw_sample_vio_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="raw_sample_vio.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/raw_sample_vio">
+    <File Path="$PSRCDIR/sources_1/ip/raw_sample_vio/raw_sample_vio.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="raw_sample_vio"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/raw_sample_vio">
+    <File Path="$PSRCDIR/sources_1/ip/raw_sample_vio/raw_sample_vio.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="raw_sample_vio"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

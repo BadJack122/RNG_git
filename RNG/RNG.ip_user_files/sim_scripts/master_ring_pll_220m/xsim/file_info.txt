@@ -1,0 +1,2 @@
+master_ring_pll_220m_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../RNG.gen/sources_1/ip/master_ring_pll_220m/master_ring_pll_220m_sim_netlist.vhdl,incdir="../../../../RNG.gen/sources_1/ip/master_ring_pll_220m"
+glbl.v,Verilog,xil_defaultlib,glbl.v

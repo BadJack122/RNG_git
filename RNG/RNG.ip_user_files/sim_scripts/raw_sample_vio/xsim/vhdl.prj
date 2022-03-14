@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../RNG.gen/sources_1/ip/raw_sample_vio/sim/raw_sample_vio.vhd" \
+
+nosort

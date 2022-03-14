@@ -1,0 +1,4 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../RNG.gen/sources_1/ip/jitter_vio/hdl/verilog"incdir="../../../../RNG.gen/sources_1/ip/jitter_vio/hdl"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../2021.2/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../RNG.gen/sources_1/ip/jitter_vio/hdl/verilog"incdir="../../../../RNG.gen/sources_1/ip/jitter_vio/hdl"
+jitter_vio.vhd,vhdl,xil_defaultlib,../../../../RNG.gen/sources_1/ip/jitter_vio/sim/jitter_vio.vhd,incdir="../../../../RNG.gen/sources_1/ip/jitter_vio/hdl/verilog"incdir="../../../../RNG.gen/sources_1/ip/jitter_vio/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

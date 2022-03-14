@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot master_ring_pll_220m xil_defaultlib.master_ring_pll_220m xil_defaultlib.glbl -log elaborate.log

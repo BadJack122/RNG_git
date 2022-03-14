@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../RNG.gen/sources_1/ip/ring_vio/sim/ring_vio.vhd" \
+
+nosort

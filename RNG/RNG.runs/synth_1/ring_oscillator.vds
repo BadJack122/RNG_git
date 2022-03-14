@@ -1,0 +1,991 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Wed Mar  9 09:28:34 2022
+# Process ID: 17620
+# Current directory: C:/edt/RNG/RNG.runs/synth_1
+# Command line: vivado.exe -log ring_oscillator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ring_oscillator.tcl
+# Log file: C:/edt/RNG/RNG.runs/synth_1/ring_oscillator.vds
+# Journal file: C:/edt/RNG/RNG.runs/synth_1\vivado.jou
+# Running On: EUL10-C37V3J3, OS: Windows, CPU Frequency: 1690 MHz, CPU Physical cores: 4, Host memory: 33723 MB
+#-----------------------------------------------------------
+source ring_oscillator.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/edt/RNG/RNG.srcs/utils_1/imports/synth_1/ring_oscillator.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/edt/RNG/RNG.srcs/utils_1/imports/synth_1/ring_oscillator.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ring_oscillator -part xczu9eg-ffvb1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Common 17-86] Your Synthesis license expires in 11 day(s)
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13616
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1845.828 ; gain = 255.727
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ring_oscillator' [C:/Entrust/fwmuro/muro_oscillator.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'clk_200_to_100' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/clk_200_to_100_stub.vhdl:16]
+INFO: [Synth 8-113] binding component instance 'enable_bufg' to cell 'BUFG' [C:/Entrust/fwmuro/muro_oscillator.vhd:237]
+INFO: [Synth 8-113] binding component instance 'ring_bufg' to cell 'BUFG' [C:/Entrust/fwmuro/muro_oscillator.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'ring_counter_fifo' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/ring_counter_fifo_stub.vhdl:19]
+INFO: [Synth 8-113] binding component instance 'ring_bufg' to cell 'BUFG' [C:/Entrust/fwmuro/muro_oscillator.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'ring_vio' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/ring_vio_stub.vhdl:29]
+INFO: [Synth 8-638] synthesizing module 'master_ring_pll_220m' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/master_ring_pll_220m_stub.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'jitter_vio' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/jitter_vio_stub.vhdl:35]
+INFO: [Synth 8-226] default block is never used [C:/Entrust/fwmuro/muro_oscillator.vhd:518]
+	Parameter SIM_DNA_VALUE bound to: 96'b000100100011010001010110011110001001101010111100110111101111000100100011010001010110011110001001 
+INFO: [Synth 8-113] binding component instance 'DNA_PORTE2_inst' to cell 'DNA_PORTE2' [C:/Entrust/fwmuro/muro_oscillator.vhd:544]
+INFO: [Synth 8-638] synthesizing module 'raw_sample_fifo' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/raw_sample_fifo_stub.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'raw_sample_vio' [C:/edt/RNG/RNG.runs/synth_1/.Xil/Vivado-17620-EUL10-C37V3J3/realtime/raw_sample_vio_stub.vhdl:13]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'jitter_vio_0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:474]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'raw_sample_vio_0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:674]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ring_gen[0].ring_counter_fifo0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:287]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ring_vio_0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:321]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ring_gen[1].ring_counter_fifo0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:287]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'jitter_gen[0].jitter_counter_fifo0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:454]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'jitter_gen[1].jitter_counter_fifo0'. This will prevent further optimization [C:/Entrust/fwmuro/muro_oscillator.vhd:454]
+INFO: [Synth 8-256] done synthesizing module 'ring_oscillator' (1#1) [C:/Entrust/fwmuro/muro_oscillator.vhd:67]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1909.688 ; gain = 319.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1927.590 ; gain = 337.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1927.590 ; gain = 337.488
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1939.672 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100/clk_200_to_100_in_context.xdc] for cell 'clk_200_to_100_0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100/clk_200_to_100_in_context.xdc] for cell 'clk_200_to_100_0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/jitter_vio/jitter_vio/jitter_vio_in_context.xdc] for cell 'jitter_vio_0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/jitter_vio/jitter_vio/jitter_vio_in_context.xdc] for cell 'jitter_vio_0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_vio/ring_vio/ring_vio_in_context.xdc] for cell 'ring_vio_0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_vio/ring_vio/ring_vio_in_context.xdc] for cell 'ring_vio_0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/raw_sample_fifo/raw_sample_fifo/raw_sample_fifo_in_context.xdc] for cell 'raw_sample_fifo_0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/raw_sample_fifo/raw_sample_fifo/raw_sample_fifo_in_context.xdc] for cell 'raw_sample_fifo_0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/raw_sample_vio/raw_sample_vio/raw_sample_vio_in_context.xdc] for cell 'raw_sample_vio_0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/raw_sample_vio/raw_sample_vio/raw_sample_vio_in_context.xdc] for cell 'raw_sample_vio_0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'ring_gen[0].ring_counter_fifo0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'ring_gen[0].ring_counter_fifo0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'ring_gen[1].ring_counter_fifo0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'ring_gen[1].ring_counter_fifo0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'jitter_gen[0].jitter_counter_fifo0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'jitter_gen[0].jitter_counter_fifo0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'jitter_gen[1].jitter_counter_fifo0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/ring_counter_fifo/ring_counter_fifo/ring_counter_fifo_in_context.xdc] for cell 'jitter_gen[1].jitter_counter_fifo0'
+Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/master_ring_pll_220m/master_ring_pll_220m/master_ring_pll_220m_in_context.xdc] for cell 'master_ring_pll_220m_0'
+Finished Parsing XDC File [c:/edt/RNG/RNG.gen/sources_1/ip/master_ring_pll_220m/master_ring_pll_220m/master_ring_pll_220m_in_context.xdc] for cell 'master_ring_pll_220m_0'
+Parsing XDC File [C:/Entrust/fwmuro/muro.xdc]
+WARNING: [Constraints 18-401] set_false_path: 'ring_gen[1].ring_sync_reg[0]/D' is not a valid endpoint. [C:/Entrust/fwmuro/muro.xdc:7]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+Finished Parsing XDC File [C:/Entrust/fwmuro/muro.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Entrust/fwmuro/muro.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ring_oscillator_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ring_oscillator_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2051.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 3 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2051.340 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'jitter_gen[0].jitter_counter_fifo0' at clock pin 'wr_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'jitter_gen[1].jitter_counter_fifo0' at clock pin 'wr_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'raw_sample_fifo_0' at clock pin 'wr_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ring_gen[0].ring_counter_fifo0' at clock pin 'wr_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ring_gen[1].ring_counter_fifo0' at clock pin 'wr_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2051.340 ; gain = 461.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2051.340 ; gain = 461.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_200_dn. (constraint file  c:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100/clk_200_to_100_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_200_dn. (constraint file  c:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100/clk_200_to_100_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_200_dp. (constraint file  c:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100/clk_200_to_100_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_200_dp. (constraint file  c:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100/clk_200_to_100_in_context.xdc, line 6).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/Entrust/fwmuro/muro.xdc, line 10).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_200_to_100_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for jitter_vio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ring_vio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for raw_sample_fifo_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for raw_sample_vio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \jitter_gen[0].jitter_counter_fifo0 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \jitter_gen[1].jitter_counter_fifo0 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \ring_gen[0].ring_counter_fifo0 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \ring_gen[1].ring_counter_fifo0 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for master_ring_pll_220m_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2051.340 ; gain = 461.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'uart_state_reg' in module 'ring_oscillator'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               uart_data |                             0001 |                              010
+               uart_stop |                             0010 |                              011
+               uart_wait |                             0100 |                              100
+               uart_idle |                             1000 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'uart_state_reg' using encoding 'one-hot' in module 'ring_oscillator'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2051.340 ; gain = 461.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   18 Bit       Adders := 5     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	             1024 Bit    Registers := 2     
+	               96 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               18 Bit    Registers := 5     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 1     
+	   4 Input   96 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2520 (col length:168)
+BRAMs: 1824 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2051.340 ; gain = 461.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3321] create_clock attempting to set clock on an unknown port/pin for constraint at line 4 of C:/Entrust/fwmuro/muro.xdc. [C:/Entrust/fwmuro/muro.xdc:4]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2545.789 ; gain = 955.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+      : i_190/I49[14]
+      : \ring_stage[1]_inferred__0 /out[14]
+      : \ring_stage[1]_inferred__0 /in0[14]
+      : \ring_stage[1]_inferred /out[14]
+      : \ring_stage[1]_inferred /in0[14]
+      : i_190/\ring_stage[1]_orig [14]
+      : i_190/I49[13]
+      : \ring_stage[1]_inferred__0 /out[13]
+      : \ring_stage[1]_inferred__0 /in0[13]
+      : \ring_stage[1]_inferred /out[13]
+      : \ring_stage[1]_inferred /in0[13]
+      : i_190/\ring_stage[1]_orig [13]
+      : i_190/I49[12]
+      : \ring_stage[1]_inferred__0 /out[12]
+      : \ring_stage[1]_inferred__0 /in0[12]
+      : \ring_stage[1]_inferred /out[12]
+      : \ring_stage[1]_inferred /in0[12]
+      : i_190/\ring_stage[1]_orig [12]
+      : i_190/I49[11]
+      : \ring_stage[1]_inferred__0 /out[11]
+      : \ring_stage[1]_inferred__0 /in0[11]
+      : \ring_stage[1]_inferred /out[11]
+      : \ring_stage[1]_inferred /in0[11]
+      : i_190/\ring_stage[1]_orig [11]
+      : i_190/I49[10]
+      : \ring_stage[1]_inferred__0 /out[10]
+      : \ring_stage[1]_inferred__0 /in0[10]
+      : \ring_stage[1]_inferred /out[10]
+      : \ring_stage[1]_inferred /in0[10]
+      : i_190/\ring_stage[1]_orig [10]
+      : i_190/I49[9]
+      : \ring_stage[1]_inferred__0 /out[9]
+      : \ring_stage[1]_inferred__0 /in0[9]
+      : \ring_stage[1]_inferred /out[9]
+      : \ring_stage[1]_inferred /in0[9]
+      : i_190/\ring_stage[1]_orig [9]
+      : i_190/I49[8]
+      : \ring_stage[1]_inferred__0 /out[8]
+      : \ring_stage[1]_inferred__0 /in0[8]
+      : \ring_stage[1]_inferred /out[8]
+      : \ring_stage[1]_inferred /in0[8]
+      : i_190/\ring_stage[1]_orig [8]
+      : i_190/I49[7]
+      : \ring_stage[1]_inferred__0 /out[7]
+      : \ring_stage[1]_inferred__0 /in0[7]
+      : \ring_stage[1]_inferred /out[7]
+      : \ring_stage[1]_inferred /in0[7]
+      : i_190/\ring_stage[1]_orig [7]
+      : i_190/I49[6]
+      : \ring_stage[1]_inferred__0 /out[6]
+      : \ring_stage[1]_inferred__0 /in0[6]
+      : \ring_stage[1]_inferred /out[6]
+      : \ring_stage[1]_inferred /in0[6]
+      : i_190/\ring_stage[1]_orig [6]
+      : i_190/I49[5]
+      : \ring_stage[1]_inferred__0 /out[5]
+      : \ring_stage[1]_inferred__0 /in0[5]
+      : \ring_stage[1]_inferred /out[5]
+      : \ring_stage[1]_inferred /in0[5]
+      : i_190/\ring_stage[1]_orig [5]
+      : i_190/I49[4]
+      : \ring_stage[1]_inferred__0 /out[4]
+      : \ring_stage[1]_inferred__0 /in0[4]
+      : \ring_stage[1]_inferred /out[4]
+      : \ring_stage[1]_inferred /in0[4]
+      : i_190/\ring_stage[1]_orig [4]
+      : i_190/I49[3]
+      : \ring_stage[1]_inferred__0 /out[3]
+      : \ring_stage[1]_inferred__0 /in0[3]
+      : \ring_stage[1]_inferred /out[3]
+      : \ring_stage[1]_inferred /in0[3]
+      : i_190/\ring_stage[1]_orig [3]
+      : i_190/I49[2]
+      : \ring_stage[1]_inferred__0 /out[2]
+      : \ring_stage[1]_inferred__0 /in0[2]
+      : \ring_stage[1]_inferred /out[2]
+      : \ring_stage[1]_inferred /in0[2]
+      : i_190/\ring_stage[1]_orig [2]
+      : i_190/I49[1]
+      : \ring_stage[1]_inferred__0 /out[1]
+      : \ring_stage[1]_inferred__0 /in0[1]
+      : \ring_stage[1]_inferred /out[1]
+      : \ring_stage[1]_inferred /in0[1]
+      : i_190/\ring_stage[1]_orig [1]
+      : i_190/I49[0]
+      : \ring_stage[1]_inferred__0 /out[0]
+      : \ring_stage[1]_inferred__0 /in0[0]
+      : \ring_stage[1]_inferred /out[0]
+      : \ring_stage[1]_inferred /in0[0]
+      : i_190/\ring_stage[1]_orig [0]
+      : i_190/I49[15]
+      : \ring_stage[1]_inferred__0 /out[15]
+      : \ring_stage[1]_inferred__0 /in0[15]
+      : \ring_stage[1]_inferred /out[15]
+      : \ring_stage[1]_inferred /in0[15]
+      : i_190/\ring_stage[1]_orig [15]
+      : i_190/out[14]
+      : \ring_stage[0]_inferred__0 /out[14]
+      : \ring_stage[0]_inferred__0 /in0[14]
+      : \ring_stage[0]_inferred /out[14]
+      : \ring_stage[0]_inferred /in0[14]
+      : i_190/\ring_stage[0]_orig [14]
+      : i_190/out[13]
+      : \ring_stage[0]_inferred__0 /out[13]
+      : \ring_stage[0]_inferred__0 /in0[13]
+      : \ring_stage[0]_inferred /out[13]
+      : \ring_stage[0]_inferred /in0[13]
+      : i_190/\ring_stage[0]_orig [13]
+      : i_190/out[12]
+      : \ring_stage[0]_inferred__0 /out[12]
+      : \ring_stage[0]_inferred__0 /in0[12]
+      : \ring_stage[0]_inferred /out[12]
+      : \ring_stage[0]_inferred /in0[12]
+      : i_190/\ring_stage[0]_orig [12]
+      : i_190/out[11]
+      : \ring_stage[0]_inferred__0 /out[11]
+      : \ring_stage[0]_inferred__0 /in0[11]
+      : \ring_stage[0]_inferred /out[11]
+      : \ring_stage[0]_inferred /in0[11]
+      : i_190/\ring_stage[0]_orig [11]
+      : i_190/out[10]
+      : \ring_stage[0]_inferred__0 /out[10]
+      : \ring_stage[0]_inferred__0 /in0[10]
+      : \ring_stage[0]_inferred /out[10]
+      : \ring_stage[0]_inferred /in0[10]
+      : i_190/\ring_stage[0]_orig [10]
+      : i_190/out[9]
+      : \ring_stage[0]_inferred__0 /out[9]
+      : \ring_stage[0]_inferred__0 /in0[9]
+      : \ring_stage[0]_inferred /out[9]
+      : \ring_stage[0]_inferred /in0[9]
+      : i_190/\ring_stage[0]_orig [9]
+      : i_190/out[8]
+      : \ring_stage[0]_inferred__0 /out[8]
+      : \ring_stage[0]_inferred__0 /in0[8]
+      : \ring_stage[0]_inferred /out[8]
+      : \ring_stage[0]_inferred /in0[8]
+      : i_190/\ring_stage[0]_orig [8]
+      : i_190/out[7]
+      : \ring_stage[0]_inferred__0 /out[7]
+      : \ring_stage[0]_inferred__0 /in0[7]
+      : \ring_stage[0]_inferred /out[7]
+      : \ring_stage[0]_inferred /in0[7]
+      : i_190/\ring_stage[0]_orig [7]
+      : i_190/out[6]
+      : \ring_stage[0]_inferred__0 /out[6]
+      : \ring_stage[0]_inferred__0 /in0[6]
+      : \ring_stage[0]_inferred /out[6]
+      : \ring_stage[0]_inferred /in0[6]
+      : i_190/\ring_stage[0]_orig [6]
+      : i_190/out[5]
+      : \ring_stage[0]_inferred__0 /out[5]
+      : \ring_stage[0]_inferred__0 /in0[5]
+      : \ring_stage[0]_inferred /out[5]
+      : \ring_stage[0]_inferred /in0[5]
+      : i_190/\ring_stage[0]_orig [5]
+      : i_190/out[4]
+      : \ring_stage[0]_inferred__0 /out[4]
+      : \ring_stage[0]_inferred__0 /in0[4]
+      : \ring_stage[0]_inferred /out[4]
+      : \ring_stage[0]_inferred /in0[4]
+      : i_190/\ring_stage[0]_orig [4]
+      : i_190/out[3]
+      : \ring_stage[0]_inferred__0 /out[3]
+      : \ring_stage[0]_inferred__0 /in0[3]
+      : \ring_stage[0]_inferred /out[3]
+      : \ring_stage[0]_inferred /in0[3]
+      : i_190/\ring_stage[0]_orig [3]
+      : i_190/out[2]
+      : \ring_stage[0]_inferred__0 /out[2]
+      : \ring_stage[0]_inferred__0 /in0[2]
+      : \ring_stage[0]_inferred /out[2]
+      : \ring_stage[0]_inferred /in0[2]
+      : i_190/\ring_stage[0]_orig [2]
+      : i_190/out[1]
+      : \ring_stage[0]_inferred__0 /out[1]
+      : \ring_stage[0]_inferred__0 /in0[1]
+      : \ring_stage[0]_inferred /out[1]
+      : \ring_stage[0]_inferred /in0[1]
+      : i_190/\ring_stage[0]_orig [1]
+      : i_190/out[0]
+      : \ring_stage[0]_inferred__0 /out[0]
+      : \ring_stage[0]_inferred__0 /in0[0]
+      : \ring_stage[0]_inferred /out[0]
+      : \ring_stage[0]_inferred /in0[0]
+      : i_190/\ring_stage[0]_orig [0]
+      : i_190/out[15]
+      : \ring_stage[0]_inferred__0 /out[15]
+      : \ring_stage[0]_inferred__0 /in0[15]
+      : \ring_stage[0]_inferred /out[15]
+      : \ring_stage[0]_inferred /in0[15]
+      : i_190/\ring_stage[0]_orig [15]
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2552.020 ; gain = 961.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: \ring_stage[0]_orig_inferredi_216 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:242]
+     1: \ring_stage[0]_orig_inferredi_216 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[15]
+      : \ring_stage[0]_inferred__0 /in0[15]
+      : \ring_stage[0]_inferred /out[15]
+      : \ring_stage[0]_inferred /in0[15]
+     2: \ring_stage[0]_orig_inferredi_217 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     3: \ring_stage[0]_orig_inferredi_217 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[14]
+      : \ring_stage[0]_inferred__0 /in0[14]
+      : \ring_stage[0]_inferred /out[14]
+      : \ring_stage[0]_inferred /in0[14]
+     4: \ring_stage[0]_orig_inferredi_215 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     5: \ring_stage[0]_orig_inferredi_215 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[13]
+      : \ring_stage[0]_inferred__0 /in0[13]
+      : \ring_stage[0]_inferred /out[13]
+      : \ring_stage[0]_inferred /in0[13]
+     6: \ring_stage[0]_orig_inferredi_214 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     7: \ring_stage[0]_orig_inferredi_214 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[12]
+      : \ring_stage[0]_inferred__0 /in0[12]
+      : \ring_stage[0]_inferred /out[12]
+      : \ring_stage[0]_inferred /in0[12]
+     8: \ring_stage[0]_orig_inferredi_213 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     9: \ring_stage[0]_orig_inferredi_213 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[11]
+      : \ring_stage[0]_inferred__0 /in0[11]
+      : \ring_stage[0]_inferred /out[11]
+      : \ring_stage[0]_inferred /in0[11]
+    10: \ring_stage[0]_orig_inferredi_212 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    11: \ring_stage[0]_orig_inferredi_212 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[10]
+      : \ring_stage[0]_inferred__0 /in0[10]
+      : \ring_stage[0]_inferred /out[10]
+      : \ring_stage[0]_inferred /in0[10]
+    12: \ring_stage[0]_orig_inferredi_211 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    13: \ring_stage[0]_orig_inferredi_211 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[9]
+      : \ring_stage[0]_inferred__0 /in0[9]
+      : \ring_stage[0]_inferred /out[9]
+      : \ring_stage[0]_inferred /in0[9]
+    14: \ring_stage[0]_orig_inferredi_210 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    15: \ring_stage[0]_orig_inferredi_210 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[8]
+      : \ring_stage[0]_inferred__0 /in0[8]
+      : \ring_stage[0]_inferred /out[8]
+      : \ring_stage[0]_inferred /in0[8]
+    16: \ring_stage[0]_orig_inferredi_209 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    17: \ring_stage[0]_orig_inferredi_209 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[7]
+      : \ring_stage[0]_inferred__0 /in0[7]
+      : \ring_stage[0]_inferred /out[7]
+      : \ring_stage[0]_inferred /in0[7]
+    18: \ring_stage[0]_orig_inferredi_208 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    19: \ring_stage[0]_orig_inferredi_208 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[6]
+      : \ring_stage[0]_inferred__0 /in0[6]
+      : \ring_stage[0]_inferred /out[6]
+      : \ring_stage[0]_inferred /in0[6]
+    20: \ring_stage[0]_orig_inferredi_207 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    21: \ring_stage[0]_orig_inferredi_207 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[5]
+      : \ring_stage[0]_inferred__0 /in0[5]
+      : \ring_stage[0]_inferred /out[5]
+      : \ring_stage[0]_inferred /in0[5]
+    22: \ring_stage[0]_orig_inferredi_206 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    23: \ring_stage[0]_orig_inferredi_206 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[4]
+      : \ring_stage[0]_inferred__0 /in0[4]
+      : \ring_stage[0]_inferred /out[4]
+      : \ring_stage[0]_inferred /in0[4]
+    24: \ring_stage[0]_orig_inferredi_205 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    25: \ring_stage[0]_orig_inferredi_205 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[3]
+      : \ring_stage[0]_inferred__0 /in0[3]
+      : \ring_stage[0]_inferred /out[3]
+      : \ring_stage[0]_inferred /in0[3]
+    26: \ring_stage[0]_orig_inferredi_204 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    27: \ring_stage[0]_orig_inferredi_204 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[2]
+      : \ring_stage[0]_inferred__0 /in0[2]
+      : \ring_stage[0]_inferred /out[2]
+      : \ring_stage[0]_inferred /in0[2]
+    28: \ring_stage[0]_orig_inferredi_203 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    29: \ring_stage[0]_orig_inferredi_203 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[1]
+      : \ring_stage[0]_inferred__0 /in0[1]
+      : \ring_stage[0]_inferred /out[1]
+      : \ring_stage[0]_inferred /in0[1]
+    30: \ring_stage[0]_orig_inferredi_202 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    31: \ring_stage[0]_orig_inferredi_202 /I0 (LUT2)
+      : \ring_stage[0]_inferred__0 /out[0]
+      : \ring_stage[0]_inferred__0 /in0[0]
+      : \ring_stage[0]_inferred /out[0]
+      : \ring_stage[0]_inferred /in0[0]
+    32: \ring_stage[0]_orig_inferredi_216 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:242]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Entrust/fwmuro/muro_oscillator.vhd:50]
+Inferred a: "set_disable_timing -from I0 -to O \ring_stage[0]_orig_inferredi_216 "
+Found timing loop:
+     0: \ring_stage[1]_orig_inferredi_232 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:242]
+     1: \ring_stage[1]_orig_inferredi_232 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[15]
+      : \ring_stage[1]_inferred__0 /in0[15]
+      : \ring_stage[1]_inferred /out[15]
+      : \ring_stage[1]_inferred /in0[15]
+     2: \ring_stage[1]_orig_inferredi_233 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     3: \ring_stage[1]_orig_inferredi_233 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[14]
+      : \ring_stage[1]_inferred__0 /in0[14]
+      : \ring_stage[1]_inferred /out[14]
+      : \ring_stage[1]_inferred /in0[14]
+     4: \ring_stage[1]_orig_inferredi_231 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     5: \ring_stage[1]_orig_inferredi_231 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[13]
+      : \ring_stage[1]_inferred__0 /in0[13]
+      : \ring_stage[1]_inferred /out[13]
+      : \ring_stage[1]_inferred /in0[13]
+     6: \ring_stage[1]_orig_inferredi_230 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     7: \ring_stage[1]_orig_inferredi_230 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[12]
+      : \ring_stage[1]_inferred__0 /in0[12]
+      : \ring_stage[1]_inferred /out[12]
+      : \ring_stage[1]_inferred /in0[12]
+     8: \ring_stage[1]_orig_inferredi_229 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+     9: \ring_stage[1]_orig_inferredi_229 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[11]
+      : \ring_stage[1]_inferred__0 /in0[11]
+      : \ring_stage[1]_inferred /out[11]
+      : \ring_stage[1]_inferred /in0[11]
+    10: \ring_stage[1]_orig_inferredi_228 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    11: \ring_stage[1]_orig_inferredi_228 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[10]
+      : \ring_stage[1]_inferred__0 /in0[10]
+      : \ring_stage[1]_inferred /out[10]
+      : \ring_stage[1]_inferred /in0[10]
+    12: \ring_stage[1]_orig_inferredi_227 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    13: \ring_stage[1]_orig_inferredi_227 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[9]
+      : \ring_stage[1]_inferred__0 /in0[9]
+      : \ring_stage[1]_inferred /out[9]
+      : \ring_stage[1]_inferred /in0[9]
+    14: \ring_stage[1]_orig_inferredi_226 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    15: \ring_stage[1]_orig_inferredi_226 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[8]
+      : \ring_stage[1]_inferred__0 /in0[8]
+      : \ring_stage[1]_inferred /out[8]
+      : \ring_stage[1]_inferred /in0[8]
+    16: \ring_stage[1]_orig_inferredi_225 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    17: \ring_stage[1]_orig_inferredi_225 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[7]
+      : \ring_stage[1]_inferred__0 /in0[7]
+      : \ring_stage[1]_inferred /out[7]
+      : \ring_stage[1]_inferred /in0[7]
+    18: \ring_stage[1]_orig_inferredi_224 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    19: \ring_stage[1]_orig_inferredi_224 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[6]
+      : \ring_stage[1]_inferred__0 /in0[6]
+      : \ring_stage[1]_inferred /out[6]
+      : \ring_stage[1]_inferred /in0[6]
+    20: \ring_stage[1]_orig_inferredi_223 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    21: \ring_stage[1]_orig_inferredi_223 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[5]
+      : \ring_stage[1]_inferred__0 /in0[5]
+      : \ring_stage[1]_inferred /out[5]
+      : \ring_stage[1]_inferred /in0[5]
+    22: \ring_stage[1]_orig_inferredi_222 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    23: \ring_stage[1]_orig_inferredi_222 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[4]
+      : \ring_stage[1]_inferred__0 /in0[4]
+      : \ring_stage[1]_inferred /out[4]
+      : \ring_stage[1]_inferred /in0[4]
+    24: \ring_stage[1]_orig_inferredi_221 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    25: \ring_stage[1]_orig_inferredi_221 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[3]
+      : \ring_stage[1]_inferred__0 /in0[3]
+      : \ring_stage[1]_inferred /out[3]
+      : \ring_stage[1]_inferred /in0[3]
+    26: \ring_stage[1]_orig_inferredi_220 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    27: \ring_stage[1]_orig_inferredi_220 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[2]
+      : \ring_stage[1]_inferred__0 /in0[2]
+      : \ring_stage[1]_inferred /out[2]
+      : \ring_stage[1]_inferred /in0[2]
+    28: \ring_stage[1]_orig_inferredi_219 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    29: \ring_stage[1]_orig_inferredi_219 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[1]
+      : \ring_stage[1]_inferred__0 /in0[1]
+      : \ring_stage[1]_inferred /out[1]
+      : \ring_stage[1]_inferred /in0[1]
+    30: \ring_stage[1]_orig_inferredi_218 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:247]
+    31: \ring_stage[1]_orig_inferredi_218 /I0 (LUT2)
+      : \ring_stage[1]_inferred__0 /out[0]
+      : \ring_stage[1]_inferred__0 /in0[0]
+      : \ring_stage[1]_inferred /out[0]
+      : \ring_stage[1]_inferred /in0[0]
+    32: \ring_stage[1]_orig_inferredi_232 /O (LUT2)
+      [C:/Entrust/fwmuro/muro_oscillator.vhd:242]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Entrust/fwmuro/muro_oscillator.vhd:50]
+Inferred a: "set_disable_timing -from I0 -to O \ring_stage[1]_orig_inferredi_232 "
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 2580.648 ; gain = 990.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[2]_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[3]_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[4]_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[5]_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[6]_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ring_counter_dout[7]_inferred:in0[8] to constant 0
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:572]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:257]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:268]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:266]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:576]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:575]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:580]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:267]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:229]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:316]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:571]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:568]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:227]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Entrust/fwmuro/muro_oscillator.vhd:275]
+INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------+----------+
+|      |BlackBox name        |Instances |
++------+---------------------+----------+
+|1     |clk_200_to_100       |         1|
+|2     |ring_counter_fifo    |         4|
+|3     |ring_vio             |         1|
+|4     |master_ring_pll_220m |         1|
+|5     |jitter_vio           |         1|
+|6     |raw_sample_fifo      |         1|
+|7     |raw_sample_vio       |         1|
++------+---------------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |clk_200_to           |     1|
+|2     |jitter_vio           |     1|
+|3     |master_ring_pll_220m |     1|
+|4     |raw_sample_fifo      |     1|
+|5     |raw_sample_vio       |     1|
+|6     |ring_counter_fifo    |     4|
+|10    |ring_vio             |     1|
+|11    |BUFG                 |     3|
+|12    |CARRY8               |    19|
+|13    |DNA_PORTE2           |     1|
+|14    |LUT1                 |   519|
+|15    |LUT2                 |    54|
+|16    |LUT3                 |    24|
+|17    |LUT4                 |    23|
+|18    |LUT5                 |    25|
+|19    |LUT6                 |   743|
+|20    |MUXF7                |   272|
+|21    |MUXF8                |   136|
+|22    |FDRE                 |  2445|
+|23    |IBUF                 |     1|
+|24    |OBUF                 |     3|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 653 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2585.031 ; gain = 871.180
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2585.031 ; gain = 994.930
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2594.086 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 431 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ring_oscillator' is not ideal for floorplanning, since the cellview 'ring_oscillator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2628.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  BUFG => BUFGCE: 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+
+Synth Design complete, checksum: cfbabeca
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 220 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 2628.195 ; gain = 1184.844
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/edt/RNG/RNG.runs/synth_1/ring_oscillator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ring_oscillator_utilization_synth.rpt -pb ring_oscillator_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  9 09:29:30 2022...

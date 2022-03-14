@@ -1,0 +1,60 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2.1 (win64) Build 3414424 Sun Dec 19 10:57:22 MST 2021
+| Date         : Wed Mar  9 09:31:37 2022
+| Host         : EUL10-C37V3J3 running 64-bit major release  (build 9200)
+| Command      : report_drc -file ring_oscillator_drc_opted.rpt -pb ring_oscillator_drc_opted.pb -rpx ring_oscillator_drc_opted.rpx
+| Design       : ring_oscillator
+| Device       : xczu9eg-ffvb1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++---------+----------+----------------------------+------------+
+| Rule    | Severity | Description                | Violations |
++---------+----------+----------------------------+------------+
+| LUTLP-2 | Warning  | Combinatorial Loop Allowed | 2          |
++---------+----------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+16 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ring_stage[0]_inferred_i_1, ring_stage[0]_inferred_i_10,
+ring_stage[0]_inferred_i_11, ring_stage[0]_inferred_i_12,
+ring_stage[0]_inferred_i_13, ring_stage[0]_inferred_i_14,
+ring_stage[0]_inferred_i_15, ring_stage[0]_inferred_i_2,
+ring_stage[0]_inferred_i_3, ring_stage[0]_inferred_i_4,
+ring_stage[0]_inferred_i_5, ring_stage[0]_inferred_i_6,
+ring_stage[0]_inferred_i_7, ring_stage[0]_inferred_i_8,
+ring_stage[0]_inferred_i_9 (the first 15 of 16 listed).
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+16 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ring_stage[1]_inferred_i_1, ring_stage[1]_inferred_i_10,
+ring_stage[1]_inferred_i_11, ring_stage[1]_inferred_i_12,
+ring_stage[1]_inferred_i_13, ring_stage[1]_inferred_i_14,
+ring_stage[1]_inferred_i_15, ring_stage[1]_inferred_i_2,
+ring_stage[1]_inferred_i_3, ring_stage[1]_inferred_i_4,
+ring_stage[1]_inferred_i_5, ring_stage[1]_inferred_i_6,
+ring_stage[1]_inferred_i_7, ring_stage[1]_inferred_i_8,
+ring_stage[1]_inferred_i_9 (the first 15 of 16 listed).
+Related violations: <none>
+
+

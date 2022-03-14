@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Wed Mar  9 09:29:37 2022
+# Process ID: 9568
+# Current directory: C:/edt/RNG/RNG.runs/impl_1
+# Command line: vivado.exe -log ring_oscillator.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ring_oscillator.tcl -notrace
+# Log file: C:/edt/RNG/RNG.runs/impl_1/ring_oscillator.vdi
+# Journal file: C:/edt/RNG/RNG.runs/impl_1\vivado.jou
+# Running On: EUL10-C37V3J3, OS: Windows, CPU Frequency: 1690 MHz, CPU Physical cores: 4, Host memory: 33723 MB
+#-----------------------------------------------------------
+source ring_oscillator.tcl -notrace

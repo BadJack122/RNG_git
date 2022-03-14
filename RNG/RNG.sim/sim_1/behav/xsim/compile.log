@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/edt/RNG/RNG.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/edt/RNG/RNG.gen/sources_1/ip/clk_200_to_100/clk_200_to_100_sim_netlist.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clk_200_to_100_clk_wiz'
+INFO: [VRFC 10-3107] analyzing entity 'clk_200_to_100'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Entrust/fwmuro/muro_definitions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Entrust/fwmuro/muro_oscillator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ring_oscillator'
+ERROR: [VRFC 10-719] formal port/generic <clk100> is not declared in <clk_200_to_100> [C:/Entrust/fwmuro/muro_oscillator.vhd:203]
+ERROR: [VRFC 10-3353] formal port 'clk_in2' has no actual or default value [C:/Entrust/fwmuro/muro_oscillator.vhd:200]
+ERROR: [VRFC 10-2987] 'ring_counter_fifo' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:287]
+ERROR: [VRFC 10-2987] 'ring_vio' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:321]
+ERROR: [VRFC 10-2987] 'master_ring_pll_220m' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:349]
+ERROR: [VRFC 10-2987] 'ring_counter_fifo' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:454]
+ERROR: [VRFC 10-2987] 'jitter_vio' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:474]
+ERROR: [VRFC 10-2987] 'raw_sample_fifo' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:662]
+ERROR: [VRFC 10-2987] 'raw_sample_vio' is not compiled in library 'xil_defaultlib' [C:/Entrust/fwmuro/muro_oscillator.vhd:674]
+ERROR: [VRFC 10-3782] unit 'rtl' ignored due to previous errors [C:/Entrust/fwmuro/muro_oscillator.vhd:67]
+INFO: [VRFC 10-3070] VHDL file 'C:/Entrust/fwmuro/muro_oscillator.vhd' ignored due to errors

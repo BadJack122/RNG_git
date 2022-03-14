@@ -1,0 +1,210 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2021.2.1 (win64) Build 3414424 Sun Dec 19 10:57:22 MST 2021
+| Date             : Wed Mar  9 09:35:30 2022
+| Host             : EUL10-C37V3J3 running 64-bit major release  (build 9200)
+| Command          : report_power -file ring_oscillator_power_routed.rpt -pb ring_oscillator_power_summary_routed.pb -rpx ring_oscillator_power_routed.rpx
+| Design           : ring_oscillator
+| Device           : xczu9eg-ffvb1156-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.148        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.495        |
+| Device Static (W)        | 0.653        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 98.9         |
+| Junction Temperature (C) | 26.1         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.075 |        9 |       --- |             --- |
+| CLB Logic                |     0.034 |    16192 |       --- |             --- |
+|   LUT as Logic           |     0.022 |     5332 |    274080 |            1.95 |
+|   Register               |     0.011 |     8432 |    548160 |            1.54 |
+|   LUT as Distributed RAM |    <0.001 |       20 |    144000 |            0.01 |
+|   CARRY8                 |    <0.001 |       72 |     34260 |            0.21 |
+|   Others                 |     0.000 |      578 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |     1105 |    274080 |            0.40 |
+|   BUFG                   |     0.000 |        1 |        32 |            3.13 |
+| Signals                  |     0.070 |    12442 |       --- |             --- |
+| Block RAM                |     0.126 |      272 |       912 |           29.82 |
+| MMCM                     |     0.187 |        0 |       --- |             --- |
+| I/O                      |     0.004 |        6 |       328 |            1.83 |
+| Static Power             |     0.653 |          |           |                 |
+| Total                    |     1.148 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     0.544 |       0.359 |      0.184 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.036 |       0.001 |      0.035 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.298 |       0.103 |      0.194 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.034 |       0.002 |      0.033 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.009 |       0.000 |      0.009 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| Clock                                                                                               | Domain                                                               | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| clk100_clk_200_to_100                                                                               | clk_200_to_100_0/inst/clk100_clk_200_to_100                          |            10.0 |
+| clk_200_dp                                                                                          | clk_200_dp                                                           |             3.3 |
+| clkfbout_clk_200_to_100                                                                             | clk_200_to_100_0/inst/clkfbout_clk_200_to_100                        |             3.3 |
+| clkfbout_master_ring_pll_220m                                                                       | master_ring_pll_220m_0/inst/clkfbout_master_ring_pll_220m            |             5.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/in0    |            50.0 |
+| master_ring_pll_clk_master_ring_pll_220m                                                            | master_ring_pll_220m_0/inst/master_ring_pll_clk_master_ring_pll_220m |             5.0 |
+| ring_clk                                                                                            | ring_clk[0]                                                          |             5.0 |
+| ring_clk                                                                                            | ring_clk[1]                                                          |             5.0 |
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------+-----------+
+| Name                                 | Power (W) |
++--------------------------------------+-----------+
+| ring_oscillator                      |     0.495 |
+|   clk_200_to_100_0                   |     0.107 |
+|     inst                             |     0.107 |
+|       clkin1_ibufds                  |     0.003 |
+|   dbg_hub                            |     0.003 |
+|     inst                             |     0.003 |
+|       BSCANID.u_xsdbm_id             |     0.003 |
+|   jitter_gen[0].jitter_counter_fifo0 |     0.004 |
+|     U0                               |     0.004 |
+|       inst_fifo_gen                  |     0.004 |
+|   jitter_gen[1].jitter_counter_fifo0 |     0.004 |
+|     U0                               |     0.004 |
+|       inst_fifo_gen                  |     0.004 |
+|   jitter_vio_0                       |     0.009 |
+|     inst                             |     0.009 |
+|       PROBE_IN_INST                  |     0.007 |
+|       U_XSDB_SLAVE                   |     0.001 |
+|   master_ring_pll_220m_0             |     0.090 |
+|     inst                             |     0.090 |
+|   raw_sample_fifo_0                  |     0.131 |
+|     U0                               |     0.131 |
+|       inst_fifo_gen                  |     0.131 |
+|   raw_sample_vio_0                   |     0.001 |
+|     inst                             |     0.001 |
+|       U_XSDB_SLAVE                   |     0.001 |
+|   ring_gen[0].ring_counter_fifo0     |     0.007 |
+|     U0                               |     0.007 |
+|       inst_fifo_gen                  |     0.007 |
+|   ring_gen[1].ring_counter_fifo0     |     0.009 |
+|     U0                               |     0.009 |
+|       inst_fifo_gen                  |     0.009 |
+|   ring_vio_0                         |     0.010 |
+|     inst                             |     0.010 |
+|       PROBE_IN_INST                  |     0.009 |
+|       U_XSDB_SLAVE                   |     0.001 |
++--------------------------------------+-----------+
+
+
